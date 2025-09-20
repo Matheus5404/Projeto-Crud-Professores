@@ -1,0 +1,36 @@
+{
+  "professores": [
+    {
+      "id": 1,
+      "name": "Ana Souza",
+      "cpf": "123.456.789-00",
+      "email": "ana.souza@fatecitu.edu.br",
+      "discipline": "Banco de Dados",
+      "phone": "(11) 91234-5678"
+    },
+    {
+      "id": 2,
+      "name": "Carlos Lima de Almeida",
+      "cpf": "987.654.321-11",
+      "email": "carlos.lima@fatecitu.edu.br",
+      "discipline": "Programação Web",
+      "phone": "(11) 99876-5432"
+    },
+    {
+      "id": 3,
+      "name": "Mariana Costa",
+      "cpf": "321.654.987-22",
+      "email": "mariana.costa@fatecitu.edu.br",
+      "discipline": "Cálculo I",
+      "phone": "(11) 93456-7890"
+    },
+    {
+      "id": 4,
+      "name": "Matheus Duarte dos Santos",
+      "cpf": "068.469.955-42",
+      "email": "matheus.ld996@gmail.com",
+      "discipline": "Redes e Computadores",
+      "phone": "15991277093"
+    }
+  ]
+}

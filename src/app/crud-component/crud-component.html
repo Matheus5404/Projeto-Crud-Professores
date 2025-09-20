@@ -1,0 +1,60 @@
+<div class="container">
+
+  <div class="display-4 text-center">Cadastro de Professores</div>
+
+  <form [formGroup]="formGroupCrud">
+    <div class="mb-3">
+      <label for="inputName" class="form-label">Nome</label>
+      <input formControlName="name" type="text" class="form-control" id="inputName">
+    </div>
+
+    <div class="mb-3">
+      <label for="inputCPF" class="form-label">CPF</label>
+      <input formControlName="cpf" type="text" class="form-control" id="inputCPF">
+    </div>
+
+    <div class="mb-3">
+      <label for="inputEmail" class="form-label">Email Institucional</label>
+      <input formControlName="email" type="text" class="form-control" id="inputEmail">
+    </div>
+
+    <div class="mb-3">
+      <label for="inputDiscipline" class="form-label">Disciplina</label>
+      <input formControlName="discipline" type="text" class="form-control" id="inputDiscipline">
+    </div>
+
+    <div class="mb-3">
+      <label for="inputPhone" class="form-label">Telefone</label>
+      <input formControlName="phone" type="text" class="form-control" id="inputPhone">
+    </div>
+
+    <button *ngIf="!isEditing" type="submit" class="btn btn-primary" (click)="save()">Salvar</button>
+    <button *ngIf="isEditing" type="submit" class="btn btn-primary" (click)="update()">Atualizar</button>
+  </form>
+
+  <div class="row g-3 mt-4 mb-5">
+    <div class="col-md-4" *ngFor="let p of cruds">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ p.name }}</h5>
+          <p class="card-text"><strong>CPF:</strong> {{ p.cpf }}</p>
+          <p class="card-text"><strong>Email:</strong> {{ p.email }}</p> 
+          <p class="card-text"><strong>Disciplina:</strong> {{ p.discipline }}</p>
+          <p class="card-text"><strong>Telefone:</strong> {{ p.phone }}</p>
+
+          <!-- Botões lado a lado, alinhados à esquerda -->
+          <div class="d-flex">
+            <button class="btn btn-secondary btn-sm me-2" (click)="onClickUpdate(p)">
+              Alterar
+            </button>
+
+            <button class="btn btn-danger btn-sm" (click)="onClickDelete(p)">
+              Remover
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
