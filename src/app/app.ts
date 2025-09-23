@@ -9,3 +9,4 @@ import { Component, signal } from '@angular/core';
 export class App {
   protected title = signal('crud');
 }
+

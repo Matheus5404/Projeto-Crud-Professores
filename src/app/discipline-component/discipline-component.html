@@ -1,1 +1,54 @@
-<p>discipline-component works!</p>
+<div class="container">
+
+  <div class="display-4 text-center">Cadastro de Disciplina</div>
+
+  <form [formGroup]="formGroupDiscipline">
+    <div class="mb-3">
+      <label for="inputName" class="form-label">Nome da Disciplina</label>
+      <input formControlName="name" type="text" class="form-control" id="inputName">
+    </div>
+
+    <div class="mb-3">
+      <label for="inputCode" class="form-label">Código</label>
+      <input formControlName="code" type="text" class="form-control" id="inputCode">
+    </div>
+
+    <div class="mb-3">
+      <label for="inputWorkload" class="form-label">Carga Horária (horas)</label>
+      <input formControlName="workload" type="number" class="form-control" id="inputWorkload">
+    </div>
+
+    <div class="mb-3">
+      <label for="inputDescription" class="form-label">Descrição</label>
+      <textarea formControlName="description" class="form-control" id="inputDescription"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+  </form>
+</div>
+
+<div class="row g-3 mt-4 mb-5">
+    <div class="col-md-4" *ngFor="let p of disciplines">
+      <div class="card h-100">
+        <div class="card-body">
+          <img src="teacher.png" class="card-img-top" alt="Foto do professor">
+          <h5 class="card-title">{{ p.name }}</h5>
+          <p class="card-text"><strong>Código:</strong> {{ p.code }}</p>
+          <p class="card-text"><strong>Carga Horária:</strong> {{ p.workload }} horas</p>
+          <p class="card-text"><strong>Descrição:</strong> {{ p.description }}</p>
+
+          <!-- Botões lado a lado, alinhados à esquerda -->
+          <div class="d-flex">
+            <button class="btn btn-secondary btn-sm me-2">
+              Alterar
+            </button>
+
+            <button class="btn btn-danger btn-sm">
+              Remover
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
