@@ -32,5 +32,42 @@
       "discipline": "Redes e Computadores",
       "phone": "15991277093"
     }
+  ],
+  "disciplines": [
+    {
+      "id": 1,
+      "name": "Banco de Dados",
+      "code": "1",
+      "workload": 80,
+      "description": "Fundamentos e prática de bancos de dados relacionais"
+    },
+    {
+      "id": 2,
+      "name": "Programação Web",
+      "code": "2",
+      "workload": 100,
+      "description": "HTML, CSS, JS, Angular e frameworks"
+    },
+    {
+      "id": 3,
+      "name": "Cálculo I",
+      "code": "3",
+      "workload": 60,
+      "description": "Funções, limites e derivadas"
+    },
+    {
+      "id": 4,
+      "name": "Redes e Computadores",
+      "code": "4",
+      "workload": 70,
+      "description": "Conceitos de redes e protocolos"
+    },
+    {
+      "id": 5,
+      "name": "Projetos Mobile",
+      "code": "5",
+      "workload": 80,
+      "description": "Aplicativos IOS"
+    }
   ]
 }
